@@ -1,0 +1,31 @@
+<div class="center-container">
+<div class="form-container ">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="teacher-name">اسم المعلم:</label>
+            <input type="text" id="teacher-name" [(ngModel)]="teacherName" name="teacherName" required>
+        </div>
+        <div class="form-group">
+            <label for="class">الفصل:</label>
+            <select id="class" [(ngModel)]="class" name="class" required>
+                <option value="">اختر الفصل</option>
+                <option value="class1">الفصل 1</option>
+                <option value="class2">الفصل 2</option>
+                <option value="class3">الفصل 3</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="present-students">عدد الطلاب الحاضرين:</label>
+            <input type="number" id="present-students" [(ngModel)]="presentStudents" name="presentStudents" required>
+        </div>
+        <div class="form-group">
+            <label for="absent-students">عدد الطلاب الغائبين:</label>
+            <input type="number" id="absent-students" [(ngModel)]="absentStudents" name="absentStudents" required>
+        </div>
+        <div class="form-group btn-s">
+            <button type="submit">تم الاخلاء</button>
+        </div>
+    </form>
+</div>
+</div>
