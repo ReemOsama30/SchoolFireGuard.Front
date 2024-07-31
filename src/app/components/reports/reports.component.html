@@ -1,1 +1,62 @@
-<p>reports works!</p>
+<div class="container">
+    <header>
+        <div class="header-title">
+            <h1>تقرير الفصول</h1>
+        </div>
+
+        <div class="header-image">
+            <img src="./assets/images/work.png" alt="Illustration">
+        </div>
+    </header>
+    <main>
+        <section class="teachers-report">
+            <h2 class="title">Teachers Report</h2>
+            
+            <!-- Info section moved below the title -->
+            <div class="header-info">
+                <div class="info-item">
+                    <p>Total Classes: {{totalClass}}</p>
+                </div>
+                <div class="info-item">
+                    <p>Total Students: {{totalStudent}}</p> <!-- Display total students -->
+                </div>
+            </div>
+
+            <!-- List of teachers' details -->
+            <div *ngFor="let teacher of teachers" class="teacher-details">
+                <h3>اسم المعلم: {{ teacher.name }}</h3>
+                <p>{{ teacher.className }}: الفصل</p>
+                <p>{{ teacher.pesentStudents }} : عدد الطلاب الحاضرين</p>
+                <p>{{ teacher.absentStudents }} : عدد الطلاب الغائبين</p>
+                <p>
+                    تم الإخلاء: 
+                    <span *ngIf="teacher.done">
+                        <i class="fas fa-check-circle" style="color: green;"></i>
+                    </span>
+                    <span *ngIf="!teacher.done">
+                        <i class="fas fa-times-circle" style="color: red;"></i>
+                    </span>
+                </p>
+            </div>
+        </section>
+
+       =
+       
+    </main>
+    <section class="progress-report">
+        <h2 class="title">Attendance Progress</h2>
+        <div class="progress-container">
+            <p>Overall Attendance Progress:</p>
+            <div class="progress-bar">
+                <div class="progress" [style.width.%]="calculateOverallProgress()">
+                    {{ calculateOverallProgress() }}%
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="button-container">
+        <button class="btn btn-danger" (click)="Reset()">Reset All</button>
+    </div>
+  
+</div>
+

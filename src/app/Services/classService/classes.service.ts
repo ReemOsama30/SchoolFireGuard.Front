@@ -13,4 +13,11 @@ export class ClassesService {
 
     return this._httpClient.get(`${environment.baseUrl}/api/Class/names`);
   }
+
+  getTotalClasses():Observable<any>{
+    return this._httpClient.get(`${environment.baseUrl}/api/Class/totalclasses`);
+  }
+  getTotalStudents():Observable<any>{
+    return this._httpClient.get(`${environment.baseUrl}/api/Class/totalstudents`);
+  }
 }

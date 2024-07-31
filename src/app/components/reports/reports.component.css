@@ -1,0 +1,145 @@
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    direction: rtl;
+}
+
+.container {
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Red background */
+    color: #fff; /* White text */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px;
+    background-color: #f5f5f5; /* Optional background color for visual separation */
+}
+.btn-danger:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.5); /* Add focus ring for accessibility */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-title {
+    text-align: right;
+    flex: 1;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.header-image {
+    margin-left: 20px;
+}
+
+.header-image img {
+    width: 180px;
+    height: 180px;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    min-height: calc(100vh - 120px); /* Adjust if needed to fit header */
+}
+
+.report-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.teachers-report {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+}
+
+.teacher-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: lavenderblush;
+    text-align: right; /* Right-align text inside the card */
+}
+
+.teacher-details h3,
+.teacher-details p {
+    margin: 0;
+    text-align: center; /* Center text within each card element */
+}
+.progress-container {
+    margin-top: 20px;
+}
+
+.progress-bar {
+  
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    max-width: 600px; /* Adjust width as needed */
+}
+
+.progress {
+    background-color: #4caf50;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}

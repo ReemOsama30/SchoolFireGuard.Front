@@ -18,6 +18,7 @@ export class AddTeacherComponent implements OnInit {
     NoOfPresentStudents: new FormControl(0),
     NoOfAbsentStudents: new FormControl(0)
   });
+  
 
   classOptions: { id: number, className: string }[] = [];
 
@@ -41,21 +42,20 @@ export class AddTeacherComponent implements OnInit {
 
   onSubmit(): void {
     if (this.teacherForm.valid) {
-      // Convert ClassID to a number
+  
       const formValue = this.teacherForm.value;
       const classID = Number(formValue.ClassID);
 
-      // Create a new object with ClassID as a number
       const submissionData = {
         ...formValue,
         ClassID: classID
       };
 
-      console.log('Form submitted', submissionData);
+     
 
       this.teacherService.insertData(submissionData).subscribe({
         next: () => {
-          console.log('Submission successful');
+          
           alert('Form submitted successfully!');
           this.teacherForm.reset();
         },
