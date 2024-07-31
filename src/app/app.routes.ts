@@ -4,6 +4,7 @@ import { InsertDataComponent } from './components/insert-data/insert-data.compon
 import { ReportsComponent } from './components/reports/reports.component';
 
 export const routes: Routes = [
+    {path:"",redirectTo:"home",pathMatch: 'full'},
 {path:'home',component:HomeComponent},
 {path:'insertData',component:InsertDataComponent},
 {
