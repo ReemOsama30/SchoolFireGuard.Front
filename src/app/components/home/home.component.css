@@ -1,17 +1,16 @@
-/* Container for three columns */
+
 .responsive-three-columns {
   display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
+ 
+height: 100vh;
 }
 
-/* Columns */
-.responsive-three-columns > * {
+.responsive-three-columns  {
   width: 100%;
   padding: 1rem;
 }
 
-/* Column specific styles */
+
 .teacher, .report {
   background-color: darkmagenta;
   color: white;
@@ -61,9 +60,9 @@
   background-color: #f8f9fa;
 }
 
-/* Image and text alignment */
+
 img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 
